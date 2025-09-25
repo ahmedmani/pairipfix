@@ -20,5 +20,5 @@ each time a protected method is called a vm code file is loaded from the app sto
 
 # alternative solutions
 
-Currently the module dosent work on some apps, i have yet to fully understand why, if this module dosent work for you or app keeps crashing when using it, try this [guide](https://www.reddit.com/r/magiarecord/wiki/installation-jp/).
+Currently the module is detected on some devices, while it works flawlessly on others, if the app instant crashes when you open it, try [BetterKnownInstalled](https://github.com/Pixel-Props/BetterKnownInstalled).
  
