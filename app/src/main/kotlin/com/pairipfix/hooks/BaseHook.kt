@@ -91,12 +91,3 @@ abstract class BaseHook {
     }
 }
 
-/**
- * Sealed class for hook module types
- */
-sealed class HookLayer {
-    object Signature : HookLayer()
-    object License : HookLayer()
-    object VM : HookLayer()
-    object Safety : HookLayer()
-}

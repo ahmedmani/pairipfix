@@ -50,10 +50,3 @@ object Logger {
         d { "Bypassed: $className.$methodName()" }
     }
 }
-
-/**
- * Extension function to log any object
- */
-fun Any?.logDebug(prefix: String = "") {
-    Logger.d { "$prefix${this?.toString() ?: "null"}" }
-}

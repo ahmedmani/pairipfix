@@ -43,7 +43,7 @@ class ApplicationBypass : BaseHook() {
         // The SignatureBypass already handles verifyIntegrity()
         val result = hook(PairIPClasses.APPLICATION, "attachBaseContext") {
             params(Context::class.java)
-            before { param ->
+            before { _ ->
                 Logger.d { "Application.attachBaseContext() called - SignatureCheck will be bypassed" }
             }
         }

@@ -51,22 +51,3 @@ object PairIPClasses {
     )
 }
 
-/**
- * License check states enum
- */
-object LicenseStates {
-    const val CHECK_REQUIRED = "CHECK_REQUIRED"
-    const val FULL_CHECK_OK = "FULL_CHECK_OK"
-    const val LOCAL_CHECK_OK = "LOCAL_CHECK_OK"
-    const val LOCAL_CHECK_REPORTED = "LOCAL_CHECK_REPORTED"
-    const val REPEATED_CHECK_REQUIRED = "REPEATED_CHECK_REQUIRED"
-}
-
-/**
- * License response codes
- */
-object ResponseCodes {
-    const val LICENSED = 0
-    const val NOT_LICENSED = 2
-    const val ERROR_INVALID_PACKAGE_NAME = 3
-}

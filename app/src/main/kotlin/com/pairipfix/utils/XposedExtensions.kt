@@ -68,7 +68,6 @@ class MethodHookBuilder(
     private var beforeHook: ((XC_MethodHook.MethodHookParam) -> Unit)? = null
     private var afterHook: ((XC_MethodHook.MethodHookParam) -> Unit)? = null
     private var replaceWith: ((XC_MethodHook.MethodHookParam) -> Any?)? = null
-    private var returnValue: Any? = null
     private var doNothing: Boolean = false
     
     fun params(vararg types: Any) {
@@ -88,7 +87,6 @@ class MethodHookBuilder(
     }
     
     fun returnConstant(value: Any?) {
-        returnValue = value
         replaceWith = { value }
     }
     
@@ -99,8 +97,13 @@ class MethodHookBuilder(
     fun build(): HookResult {
         return try {
             val callback: XC_MethodHook = when {
-                doNothing -> XC_MethodReplacement.DO_NOTHING
-                
+                doNothing -> object : XC_MethodReplacement() {
+                    override fun replaceHookedMethod(param: MethodHookParam): Any? {
+                        Logger.bypassed(className, methodName)
+                        return null
+                    }
+                }
+
                 replaceWith != null -> object : XC_MethodReplacement() {
                     override fun replaceHookedMethod(param: MethodHookParam): Any? {
                         Logger.bypassed(className, methodName)
