@@ -6,6 +6,7 @@ import com.pairipfix.hooks.*
 import com.pairipfix.utils.Logger
 import com.pairipfix.utils.PairIPClasses
 import com.pairipfix.utils.hasClass
+import com.pairipfix.BuildConfig
 
 /**
  * Main entry point for PairIP bypass Xposed module
@@ -38,11 +39,6 @@ import com.pairipfix.utils.hasClass
  * - Lambda expressions throughout
  */
 class MainHook : IXposedHookLoadPackage {
-
-    companion object {
-        private const val MODULE_NAME = "PairIPFix"
-        private const val MODULE_VERSION = "2.0.0"
-    }
 
     override fun handleLoadPackage(lpparam: XC_LoadPackage.LoadPackageParam) {
         // Check if this package has PairIP protection
@@ -116,7 +112,7 @@ class MainHook : IXposedHookLoadPackage {
     
     private fun printBanner(packageName: String) {
         Logger.i { "========================================" }
-        Logger.i { "$MODULE_NAME v$MODULE_VERSION" }
+        Logger.i { "PairIPFix v${BuildConfig.VERSION_NAME}" }
         Logger.i { "Target package: $packageName" }
         Logger.i { "========================================" }
     }

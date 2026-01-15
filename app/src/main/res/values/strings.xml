@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">PairIPFix</string>
-    <string name="app_description">Comprehensive bypass for Google PairIP (Play Integrity) protection</string>
-    <string name="module_version">2.0.0</string>
 </resources>

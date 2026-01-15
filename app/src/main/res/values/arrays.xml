@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- 
-    Xposed scope - apps to hook
-    Empty array means hook ALL apps (recommended for PairIP bypass)
-    This allows the module to automatically detect and bypass PairIP
-    in any app without manual configuration
-    -->
+    <!-- Empty array = hook all apps -->
     <string-array name="xposedscope">
-        <!-- Add specific package names here to limit scope, e.g.: -->
-        <!-- <item>com.example.app</item> -->
     </string-array>
 </resources>
