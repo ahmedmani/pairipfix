@@ -10,19 +10,21 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        tools:targetApi="31" >
+        tools:targetApi="31">
 
+        <!-- Xposed Module Metadata -->
         <meta-data
             android:name="xposedmodule"
             android:value="true"/>
         <meta-data
             android:name="xposeddescription"
-            android:value="lsposed module to bypass pairipcore apk checks" />
+            android:value="Comprehensive bypass for Google PairIP (Play Integrity) protection. Bypasses signature check, license verification, and VM protection."/>
         <meta-data
             android:name="xposedminversion"
-            android:value="54"/>
+            android:value="93"/>
         <meta-data
             android:name="xposedscope"
             android:resource="@array/xposedscope"/>
-        </application>
+            
+    </application>
 </manifest>
