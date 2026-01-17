@@ -1,5 +1,6 @@
 <resources>
-    <string-array name="xposedscope" >
-        <item>com.android.pairipfix</item>
+    <!-- Empty scope: Users must manually select target apps in LSPosed Manager -->
+    <!-- This is intentional since PairIP protection can be in any app -->
+    <string-array name="xposedscope">
     </string-array>
 </resources>
