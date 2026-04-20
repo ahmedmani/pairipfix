@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "io.github.ahmedmani.pairipfix"
+    namespace = "io.github.ahmedmani.io.github.ahmedmani.pairipfixio.github.ahmedmani.pairipfix"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "io.github.ahmedmani.pairipfix"
+        applicationId = "io.github.ahmedmani.io.github.ahmedmani.pairipfixio.github.ahmedmani.pairipfix"
         minSdk = 26
         targetSdk = 34
         versionCode = 1
